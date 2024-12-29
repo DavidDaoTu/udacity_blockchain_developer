@@ -1,3 +1,9 @@
+Unfortunately, I can't install packages in my machine.. it seems the node version or dev dependencies are mismatched...
+
+NOTE: 
+==> I created INFURA_API_KEY & ACCOUNT_PRIVATE_KEY already, but I got issues with node version & package so I temporarily removed those keys in Github submit.
+
+====================
 # Project: Collateralized Loan Smart Contract Development
 
 In this project, you will develop, deploy, and interact with a simple collateralized loan contract on the Ethereum blockchain using Solidity. This contract will manage loans backed by Ethereum as collateral, offering hands-on experience with real-world financial smart contracts.
