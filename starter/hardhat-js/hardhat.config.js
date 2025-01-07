@@ -1,23 +1,12 @@
-const { HardhatUserConfig } = require("hardhat/config");
 require("@nomicfoundation/hardhat-toolbox");
-require("dotenv/config");
+require("dotenv").config();
 
-const config = {
-  solidity: {
-    version: "0.8.19",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-    },
-  },
+module.exports = {
+  solidity: "0.8.19",
   networks: {
-    "sepolia-testnet": {
-      url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
-      accounts: [process.env.ACCOUNT_PRIVATE_KEY].filter(Boolean),
-    },
-  },
+    sepolia: {
+      url: process.env.SEPOLIA_URL,
+      accounts: [process.env.PRIVATE_KEY]
+    }
+  }
 };
-
-module.exports = config;
