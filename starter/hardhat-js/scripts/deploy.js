@@ -1,23 +1,14 @@
-const { ethers } = require("hardhat");
-
 async function main() {
-  console.log("Starting deployment...");
+  const CollateralizedLoan = await ethers.getContractFactory("CollateralizedLoan");
+  const collateralizedLoan = await CollateralizedLoan.deploy();
 
-  // Get the contract factory for the CollateralizedLoan contract
-  const CollateralizedLoan = await ethers.getContractFactory(
-    "CollateralizedLoan"
-  );
 
-  // Deploy the contract
-  const contract = await CollateralizedLoan.deploy();
+  
 
-  // The contract is now deployed, and you can log its address
-  console.log(`CollateralizedLoan deployed successfully`);
+  console.log(`CollateralizedLoan deployed to: ${collateralizedLoan.address}`);
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error("An error occurred during deployment:", error);
-    process.exit(1);
-  });
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
