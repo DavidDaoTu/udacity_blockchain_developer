@@ -1,3 +1,9 @@
+Sepolia.etherscan URL: https://sepolia.etherscan.io/address/0x935B19C26884CeA3f08e35e8A88b9B39A0634Cc7
+
+
+
+
+// Fixed
 Unfortunately, I can't install packages in my machine.. it seems the node version or dev dependencies are mismatched...
 
 NOTE: 
