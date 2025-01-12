@@ -20,7 +20,14 @@ contract CollateralizedLoan {
     uint public nextLoanId;
 
     // Events
-    event LoanRequested(uint loanId, address indexed borrower, uint collateralAmount, uint loanAmount, uint interestRate, uint dueDate);
+    event LoanRequested(
+        uint256 loanId,
+        address borrower,
+        uint256 collateralAmount,
+        uint256 loanAmount,
+        uint256 interestRate,
+        uint256 dueDate
+    );
     event LoanFunded(uint loanId, address indexed lender);
     event LoanRepaid(uint loanId, address indexed borrower);
     event CollateralClaimed(uint loanId, address indexed lender);
